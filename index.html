@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Table Assignments</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 60px 20px;
+  background: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* DROPDOWN */
+.dropdown {
+  margin-bottom: 18px;
+  border-radius: 25px 25px 25px 0px;
+  overflow: hidden;
+  border: 1px solid #eee;
+  transition: all 0.4s ease;
+}
+
+/* HEADER */
+.dropdown-header {
+  display: flex;
+  align-items: center;
+  padding: 22px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.5s cubic-bezier(.22,1,.36,1);
+}
+
+/* ORANGE FILL */
+.dropdown-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #e14403;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s cubic-bezier(.22,1,.36,1);
+  z-index: 0;
+  border-radius: 25px 25px 25px 0px;
+}
+
+.title {
+  font-weight: 700;
+  font-size: 18px;
+  color: #101820;
+  position: relative;
+  z-index: 1;
+}
+
+.line {
+  flex: 1;
+  height: 2px;
+  background: #e14403;
+  margin: 0 15px;
+  transition: background 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.arrow {
+  font-size: 14px;
+  color: #e14403;
+  transition: transform 0.4s ease, color 0.4s ease;
+  position: relative;
+  z-index: 1;
+}
+
+/* ACTIVE STATE */
+.dropdown.active .dropdown-header::before {
+  transform: scaleX(1);
+}
+
+.dropdown.active .title,
+.dropdown.active .arrow {
+  color: #ffffff;
+}
+
+.dropdown.active .line {
+  background: #ffffff;
+}
+
+.dropdown.active .arrow {
+  transform: rotate(180deg);
+}
+
+/* CONTENT */
+.content {
+  height: 0;
+  overflow: hidden;
+  transition: height 0.5s cubic-bezier(.22,1,.36,1);
+  background: #ffffff;
+}
+
+.content-inner {
+  padding: 25px;
+}
+
+/* NAME LIST */
+.name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.name-list li {
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 15px;
+}
+
+.name-list li:last-child {
+  border-bottom: none;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <!-- TABLE 1 -->
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 1</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Andrew Bond</li>
+          <li>Cole Davis</li>
+          <li>Colin Yoshihara</li>
+          <li>Elaine Goetz</li>
+          <li>Randy Ewers</li>
+          <li>Rico Sawaya</li>
+          <li>Tom Yutko</li>
+          <li>Erik Walter</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABLE 2 -->
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 2</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Ali Hammoudi</li>
+          <li>David Johnson</li>
+          <li>Derek Kilian</li>
+          <li>Eric Nyenhuis</li>
+          <li>Evan Domingue</li>
+          <li>Jimmy Spivey</li>
+          <li>Joe Black</li>
+          <li>Tram Huynh</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 3</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Ashley Casanova</li>
+          <li>Brent Patera</li>
+          <li>Danielle Flickinger</li>
+          <li>Doug McWhinney</li>
+          <li>Luis Padron</li>
+          <li>Marc Morales</li>
+          <li>Michael Bartus</li>
+          <li>Neeraj Yadev</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+      <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 4</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>David Friedly</li>
+          <li>Eric Fleckenstein</li>
+          <li>Greta Petrovaite</li>
+          <li>Gus Goldberg</li>
+          <li>Jesse Abel</li>
+          <li>Ken Robinson</li>
+          <li>Matt Popka</li>
+          <li>Michael May</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 5</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Cynthia Deloach</li>
+          <li>Danny Kelsey</li>
+          <li>Eliot Hunter</li>
+          <li>Mark Owens</li>
+          <li>Michael Wright</li>
+          <li>Sergio Corona</li>
+          <li>Katia Swanson</li>
+          <li>Tejas Pevekar</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 6</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Donna Squillace</li>
+          <li>Isaac Brown</li>
+          <li>Jeremy McLin</li>
+          <li>Jeremy Suit</li>
+          <li>John Clint</li>
+          <li>Lisa Starr</li>
+          <li>Robert Pearse</li>
+          <li>Scott Emerton</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 7</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Aaron Hart</li>
+          <li>Andrea Eeckhout</li>
+          <li>Bimal Kaur</li>
+          <li>Derek Stover</li>
+          <li>Elliot Alexander</li>
+          <li>Randy Peacock</li>
+          <li>Ricky Shelton</li>
+          <li>Scott Tyra</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 8</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Anthony Roner</li>
+          <li>David Seifert</li>
+          <li>Eric Penningroth</li>
+          <li>Josh Gallo</li>
+          <li>Maria Osborne</li>
+          <li>Roxanne Fong</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 9</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Brandon Pelt</li>
+          <li>Carlos BlindEagle</li>
+          <li>Craig Ahrens</li>
+          <li>Ed Duffy</li>
+          <li>Gaby Valdivieso</li>
+          <li>Kenny Tang</li>
+          <li>Oanh Tran</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 10</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Brent Tracy</li>
+          <li>Carsten Fehr</li>
+          <li>Ted Lynch</li>
+          <li>Dom Cardenas</li>
+          <li>Eric Koehler</li>
+          <li>Grayson Delegeane</li>
+          <li>Jeff Miesen</li>
+          <li>Juan Garza</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 11</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Allison Gentry</li>
+          <li>Bruno Ramos</li>
+          <li>Claire Floquet Halton</li>
+          <li>Dan Hutchinson</li>
+          <li>Daniel Epps</li>
+          <li>Lee Chorba</li>
+          <li>Simon Perkins</li>
+          <li>Sasha Rivera</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 12</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Brendan Branigan</li>
+          <li>Cartez Jack</li>
+          <li>Dhanvi Thakkar</li>
+          <li>Jackie Kelly</li>
+          <li>John Schmid</li>
+          <li>Mike Finck</li>
+          <li>Steven Lim</li>
+          <li>Tom Doherty</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 13</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Anthony Chiaramonte</li>
+          <li>Derek Ensign</li>
+          <li>Geline Manuel</li>
+          <li>Jordan Terrones</li>
+          <li>Josh Steeber</li>
+          <li>Madeline Hunstein</li>
+          <li>Matt Johnson</li>
+          <li>Scotty Hutto</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 14</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Dan Troyer</li>
+          <li>Danielle Dion</li>
+          <li>Gurpreet Kaur</li>
+          <li>Jahnai Binns</li>
+          <li>Jeff Schaller</li>
+          <li>Steven Ramirez</li>
+          <li>Travis Fletcher</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 15</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Aaron De Leon</li>
+          <li>Alicia Bender</li>
+          <li>Cory Ogden</li>
+          <li>Erin Schaefer</li>
+          <li>Jackson Gavette</li>
+          <li>Juan Rios</li>
+          <li>Nello Tortora</li>
+          <li>Tarah Murphy</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 16</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Gary Fogarty</li>
+          <li>Jessica Chacon</li>
+          <li>Joe Hoff</li>
+          <li>Joe Levesque</li>
+          <li>Keith Castle</li>
+          <li>Kevin Hoff</li>
+          <li>Steve Canning</li>
+          <li>Will Travers</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 17</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Aman Khippal</li>
+          <li>Bryan Stough</li>
+          <li>Desiree Haus</li>
+          <li>Katie Hardwicke</li>
+          <li>Marshall Noble</li>
+          <li>Michael Williams</li>
+          <li>Russ Hudson</li>
+          <li>Will Shueh</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 18</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Darryl Matsui</li>
+          <li>Gio Javier</li>
+          <li>Jay Hill</li>
+          <li>Marcel Ruegg</li>
+          <li>Myra Zhinin</li>
+          <li>Sam Simcox</li>
+          <li>Tim Shattuck</li>
+          <li>Tim Simmons</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+    <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 19</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Analia Winters-Sakowicz</li>
+          <li>Andrew Wilson</li>
+          <li>Carston Nyenhuis</li>
+          <li>Chris Mills</li>
+          <li>Eric Larson</li>
+          <li>Kurt Hilgart</li>
+          <li>Larry Shafferman</li>
+          <li>Sean Tarasuk</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+  <div class="dropdown">
+    <div class="dropdown-header">
+      <div class="title">TABLE 20</div>
+      <div class="line"></div>
+      <div class="arrow">▼</div>
+    </div>
+    <div class="content">
+      <div class="content-inner">
+        <ul class="name-list">
+          <li>Bathsheba Gilmore</li>
+          <li>Jeff Ratliff</li>
+          <li>Julio Guerrero</li>
+          <li>Matthew Short</li>
+          <li>Maureen McDonald</li>
+          <li>Michael Vaughan</li>
+          <li>Dan Navarrete</li>
+          <li>Virak Dee</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+<script>
+document.querySelectorAll(".dropdown-header").forEach(header => {
+  header.addEventListener("click", () => {
+    const dropdown = header.parentElement;
+    const content = dropdown.querySelector(".content");
+
+    if (dropdown.classList.contains("active")) {
+      content.style.height = content.scrollHeight + "px";
+      requestAnimationFrame(() => {
+        content.style.height = "0px";
+      });
+      dropdown.classList.remove("active");
+    } else {
+      dropdown.classList.add("active");
+      content.style.height = content.scrollHeight + "px";
+    }
+  });
+});
+</script>
+
+</body>
+</html>
